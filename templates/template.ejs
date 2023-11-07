@@ -6,17 +6,29 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: brown;
+        background-color: steelblue;
       }
-
+      h1 {
+        background-color: tomato;
+        color: aliceblue;
+        margin: 0;
+      }
       p {
         color: tomato;
         font-size: 2rem;
         text-align: center;
       }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+      }
     </style>
   </head>
   <body>
+    <div class="nav">
+      <p>Logo</p>
+      <p>link//:solruf.com</p>
+    </div>
     <h1 class="blueBg">User Information</h1>
     <p>Name: <%= user.first_name %></p>
     <p>Age: <%= user.age %></p>

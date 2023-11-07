@@ -23,7 +23,11 @@ export class PdfService {
     const page = await browser.newPage();
 
     await page.setContent(html);
-    const pdfBuffer = await page.pdf();
+
+    const pdfBuffer = await page.pdf({
+      printBackground: true,
+      format: 'Letter',
+    });
 
     await browser.close();
 
